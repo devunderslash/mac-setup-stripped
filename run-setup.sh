@@ -1,8 +1,5 @@
 # This will run the initial setup for ansible to be able to run the playbook
 
-# Installing Xcode Command Line Tools
-xcode-select --install
-
 # install homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew doctor

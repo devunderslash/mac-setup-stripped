@@ -1,0 +1,146 @@
+---
+downloads: ~/.ansible-downloads/
+
+configure_dotfiles: true
+configure_terminal: false
+# configure_osx: true
+configure_iterm: true
+# Change default shell to zsh
+default_shell_zsh: yes
+# Install oh my zsh
+install_oh_my_zsh: yes
+
+# Set to 'true' to configure the Dock via dockutil.
+configure_dock: true
+dockitems_remove:
+  - Launchpad
+  - TV
+  - Podcasts
+  - 'App Store'
+  - Keynote
+  - Numbers
+  - Pages
+  - News
+  - Music
+  - Contacts
+  - FaceTime
+  - Photos
+  - Messages
+  - Safari
+  - Maps
+
+dockitems_persist: []
+#  - name: "VSCode"
+#    path: "/Applications/Visual Studio Code.app"
+#    pos: 5
+#  - name: "Teams"
+#    path: "/Applications/Microsoft Teams.app"
+#    pos: 1
+#  - name: "Chrome"
+#    path: "/Applications/Google Chrome.app"
+#    pos: 3
+#  - name: "Sourcetree"
+#    path: "/Applications/Sourcetree.app"
+#    pos: 4
+#  - name: "iTerm"
+#    path: "/Applications/iTerm.app"
+#    pos: 2
+
+configure_sudoers: false
+sudoers_custom_config: ''
+# Example:
+# sudoers_custom_config: |
+#   # Allow users in admin group to use sudo with no password.
+#   %admin ALL=(ALL) NOPASSWD: ALL
+
+dotfiles_repo: https://github.com/devunderslash/dotfiles.git
+dotfiles_repo_accept_hostkey: true
+dotfiles_repo_version: main
+dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
+dotfiles_files:
+  - .zshrc
+  - .gitignore
+  - .inputrc
+  - .p10k.zsh
+  - .vimrc
+
+homebrew_installed_packages:
+  # - ansible # Installed via Pip.
+  - bash-completion
+  - git
+  - github/gh/gh
+  - hub
+  - go
+  - gpg
+  - mysql
+  - sqlite
+  - nmap
+  - node
+  - nvm
+  - ssh-copy-id
+  - readline
+  - openssl
+  - wget
+  - zsh-history-substring-search
+  - tmux
+  - awscli
+  - jq
+  - tree
+  - warrensbox/tap/tfswitch
+  - packer
+  - romkatv/powerlevel10k/powerlevel10k
+  # *** Java ***
+  - jenv # Manage your Java environment
+  - jmeter # Load testing and performance measurement application
+  - maven # Java-based project management
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+  - adoptopenjdk/openjdk
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - chromedriver
+  - docker
+#  - google-chrome
+  - mysqlworkbench
+  - pgadmin4
+  - slack
+  - vagrant
+  - virtualbox
+  - iterm2
+  - postman
+  - sourcetree
+  - adoptopenjdk8 #Java JDK
+  - adoptopenjdk11 #Java JDK
+
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_installed_apps: []
+mas_email: ""
+mas_password: ""
+
+# osx_script: "~/.osx --no-restart"
+
+# visual_studio_code_extensions:
+#   - vscoss.vscode-ansible # Ansible 
+#   - eamodio.gitlens # Supercharge Git 
+#   - akamud.vscode-theme-onedark # Theme
+#   - file-icons.file-icons #Icons
+#   - DotJoshJohnson.xml # ML formatting
+#   - formulahendry.code-runner # Run code from vscode
+#   - mauve.terraform # Terraform
+#   - ms-azuretools.vscode-docker # Linting for Dockerfile and docker-compose files
+#   - ms-python.python # Python
+#   - ms-vsliveshare.vsliveshare # Real-time collaborative development
+#   - msjsdiag.debugger-for-chrome # Debugger for Chrome
+#   - nhoizey.gremlins # Reveals some characters that can be harmful because they are invisible or looking like legitimate ones
+#   - quicktype.quicktype # Copy JSON, paste as Go, TypeScript, C#, C++ and more
+#   - redhat.vscode-yaml # Yaml language support
+#   - samuelcolvin.jinjahtml # Syntax highlighting for jinja
+#   - tht13.python # Python language
+#   - VisualStudioExptTeam.vscodeintellicode # AI-assisted development
+#   - gitHub.copilot the # AI assisted Development
+
+# Glob pattern to ansible task files to run after all other tasks are finished.
+post_provision_tasks: []

@@ -109,6 +109,7 @@ homebrew_cask_apps:
   - slack
   - vagrant
   - virtualbox
+  - virtualbox-extension-pack
   - iterm2
   - postman
   - sourcetree

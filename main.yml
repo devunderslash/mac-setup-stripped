@@ -50,9 +50,9 @@
       when: configure_sudoers
       tags: ['sudoers']
 
-    - import_tasks: tasks/terminal.yml
-      when: configure_terminal
-      tags: ['terminal']
+        #    - import_tasks: tasks/terminal.yml
+        #      when: configure_terminal
+        #      tags: ['terminal']
 
     - import_tasks: tasks/iterm2.yml
       when: configure_iterm

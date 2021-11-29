@@ -117,6 +117,7 @@ homebrew_cask_apps:
   - adoptopenjdk8 #Java JDK
   - adoptopenjdk11 #Java JDK
   - powershell
+  - dbeaver-community
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []

@@ -118,6 +118,7 @@ homebrew_cask_apps:
   - adoptopenjdk11 #Java JDK
   - powershell
   - dbeaver-community
+  - session-manager-plugin
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []

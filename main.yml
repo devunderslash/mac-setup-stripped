@@ -28,6 +28,8 @@
       users:
         - username: '{{ user }}'
           visual_studio_code_extensions:
+          # with_items:
+          #   - '{{ vscode_extensions }}'
             - eamodio.gitlens # Supercharge Git 
             - akamud.vscode-theme-onedark # Theme
             - file-icons.file-icons #Icons
@@ -49,10 +51,6 @@
     - import_tasks: tasks/sudoers.yml
       when: configure_sudoers
       tags: ['sudoers']
-
-    - import_tasks: tasks/terminal.yml
-      when: configure_terminal
-      tags: ['terminal']
 
     - import_tasks: tasks/iterm2.yml
       when: configure_iterm

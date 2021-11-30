@@ -4,7 +4,10 @@
 
 [![CI][badge-gh-actions]][link-gh-actions]
 
-This playbook installs and configures most of the software I use on my Mac for web and software development. Some things in macOS are slightly difficult to automate, so I still have a few manual installation steps, but at least it's all documented here.
+This playbook installs and configures most of the software used on Mac for software development. Some things in macOS are slightly difficult to automate, so there are still a few manual steps, but much less than if you were to install all the software yourself. Please review the main files in this repository and change them approiately to your needs:
+  - main.yml - This is the main playbook file.
+  - default.config.yml - Contains all software and VS Code extensions
+  - dotfiles - You should review the repo that this links to as the dotfiles used may not be to your liking.
 
 ## Installation
 
@@ -71,23 +74,51 @@ Applications (installed with Homebrew Cask):
 
   - [ChromeDriver](https://sites.google.com/chromium.org/driver/)
   - [Docker](https://www.docker.com/)
-  - [Dropbox](https://www.dropbox.com/)
-  - [Firefox](https://www.mozilla.org/en-US/firefox/new/)
   - [Google Chrome](https://www.google.com/chrome/)
-  - [Handbrake](https://handbrake.fr/)
   - [Homebrew](http://brew.sh/)
-  - [LICEcap](http://www.cockos.com/licecap/)
-  - [LimeChat](http://limechat.net/mac/)
-  - [MacVim](http://macvim-dev.github.io/macvim/)
-  - [nvALT](http://brettterpstra.com/projects/nvalt/)
-  - [Sequel Ace](https://sequel-ace.com) (MySQL client)
-  - [Skitch](https://evernote.com/skitch/)
+  - [iTerm2](https://www.iterm2.com/)
+  - [MySql](https://www.mysql.com/)
+  - [Postgresql](https://www.postgresql.org/)
+  - [Postman](https://www.getpostman.com/)
   - [Slack](https://slack.com/)
-  - [Sublime Text](https://www.sublimetext.com/)
-  - [Transmit](https://panic.com/transmit/) (S/FTP client)
+  - [Sourcetree](https://www.sourcetreeapp.com/)
   - [Vagrant](https://www.vagrantup.com/)
+  - [VirtualBox](https://www.virtualbox.org/)
+  - [Visual Studio Code](https://code.visualstudio.com/)
+  - [OpenJDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
 Packages (installed with Homebrew):
+# *** Common Dev Tools ***
+  - bash-completion
+  - git
+  - github/gh/gh
+  - hub
+  - go
+  - gpg
+  - mysql
+  - sqlite
+  - nmap
+  - node
+  - nvm
+  - ssh-copy-id
+  - readline
+  - openssl
+  - wget
+  - zsh-history-substring-search
+  - tmux
+  - romkatv/powerlevel10k/powerlevel10k
+
+  # *** DevOps ***
+  - awscli
+  - jq
+  - tree
+  - warrensbox/tap/tfswitch
+  - packer
+
+  # *** Java ***
+  - jenv # Manage your Java environment
+  - jmeter # Load testing and performance measurement application
+  - maven # Java-based project management
 
   - autoconf
   - bash-completion
@@ -121,30 +152,16 @@ Finally, there are a few other preferences and settings added on for various app
 
 It's my hope that I can get the rest of these things wrapped up into Ansible playbooks soon, but for now, these steps need to be completed manually (assuming you already have Xcode and Ansible installed, and have run this playbook).
 
-  1. Set JJG-Term as the default Terminal theme (it's installed, but not set as default automatically).
-  3. Install all the apps that aren't yet in this setup (see below).
-  4. Remap Caps Lock to Escape (requires macOS Sierra 10.12.1+).
-  5. Set trackpad tracking rate.
-  6. Set mouse tracking rate.
-  7. Configure extra Mail and/or Calendar accounts (e.g. Google, Exchange, etc.).
-
-### Configuration to be added:
-
-  - I have vim configuration in the repo, but I still need to add the actual installation:
-    ```
-    mkdir -p ~/.vim/autoload
-    mkdir -p ~/.vim/bundle
-    cd ~/.vim/autoload
-    curl https://raw.githubusercontent.com/tpope/vim-pathogen/master/autoload/pathogen.vim > pathogen.vim
-    cd ~/.vim/bundle
-    git clone git://github.com/scrooloose/nerdtree.git
-    ```
+  1. Native MacOS terminal may need a font and theme update via preferences to take in changes made in .zshrc (MesloLGS NF Regular 13 and theme of your choice)
+  2. Visual Studio Code may also need a font update via preferences:
+    - Preferences > Editor > Font Size:  `"terminal.integrated.lineHeight": 1.3`
+    - Preferences > Editor > Font Family: `"terminal.integrated.fontFamily": "MesloLGS NF"`
 
 ## Testing the Playbook
 
-Many people have asked me if I often wipe my entire workstation and start from scratch just to test changes to the playbook. Nope! Instead, I posted instructions for how I build a [Mac OS X VirtualBox VM](https://github.com/geerlingguy/mac-osx-virtualbox-vm), on which I can continually run and re-run this playbook to test changes and make sure things work correctly.
+This has been tested via Vagrant and VirtualBox using macOS Big Sur. Check the following repo with how to do this: #TODO
 
-Additionally, this project is [continuously tested on GitHub Actions' macOS infrastructure](https://github.com/geerlingguy/mac-dev-playbook/actions?query=workflow%3ACI).
+Use this repo to build a [Mac OS X VirtualBox VM](https://github.com/geerlingguy/mac-osx-virtualbox-vm), on which you can continually run and re-run this playbook to test changes and make sure things work correctly.
 
 ## Ansible for DevOps
 
@@ -152,7 +169,5 @@ Check out [Ansible for DevOps](https://www.ansiblefordevops.com/), which teaches
 
 ## Author
 
-This project was created by [Jeff Geerling](https://www.jeffgeerling.com/) (originally inspired by [MWGriffin/ansible-playbooks](https://github.com/MWGriffin/ansible-playbooks)).
+This project was created by [Jeff Geerling](https://www.jeffgeerling.com/) (originally inspired by [MWGriffin/ansible-playbooks](https://github.com/MWGriffin/ansible-playbooks)) and butchered by [Paul Devlin](https://github.com/devunderslash)
 
-[badge-gh-actions]: https://github.com/geerlingguy/mac-dev-playbook/workflows/CI/badge.svg?event=push
-[link-gh-actions]: https://github.com/geerlingguy/mac-dev-playbook/actions?query=workflow%3ACI

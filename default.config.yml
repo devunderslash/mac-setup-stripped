@@ -69,28 +69,29 @@ homebrew_installed_packages:
   - bash-completion
   - git
   - github/gh/gh
-  - hub
   - go
   - gpg
+  - hub
   - mysql
-  - sqlite
   - nmap
   - node
   - nvm
-  - ssh-copy-id
-  - readline
   - openssl
+  - readline
+  - romkatv/powerlevel10k/powerlevel10k
+  - ruby
+  - sqlite
+  - ssh-copy-id
+  - tmux
   - wget
   - zsh-history-substring-search
-  - tmux
-  - romkatv/powerlevel10k/powerlevel10k
 
   # *** DevOps ***
   - awscli
   - jq
+  - packer
   - tree
   - warrensbox/tap/tfswitch
-  - packer
 
   # *** Java ***
   - jenv # Manage your Java environment

@@ -8,7 +8,7 @@ This playbook installs and configures most of the software used on Mac for softw
   - main.yml - This is the main playbook file.
   - default.config.yml - Contains all software and VS Code extensions
   - dotfiles - You should review the repo that this links to as the dotfiles used may not be to your liking.
-  - VS Code extensions - You should review that the VSCode extensions in main.yml are what you would want
+  - VS Code - You should review that the VSCode extensions in main.yml are what you would want and also update the user to your username (currently set as admin).
 
 ## Installation
 
@@ -28,7 +28,7 @@ You can filter which part of the provisioning process to run by specifying a set
 
 Not everyone's development environment and preferred software configuration is the same.
 
-You can override any of the defaults configured in `default.config.yml` (by updating the file) by creating a `config.yml` file and setting the overrides in that file. For example, you can customize the installed packages and apps with something like:
+You can override any of the defaults configured in `default.config.yml` by just updating them in situ or by creating a `config.yml` file and setting the overrides in that file. For example, you can customize the installed packages and apps with something like:
 
 ```yaml
 homebrew_installed_packages:
@@ -120,31 +120,6 @@ Packages (installed with Homebrew):
   - jenv # Manage your Java environment
   - jmeter # Load testing and performance measurement application
   - maven # Java-based project management
-
-  - autoconf
-  - bash-completion
-  - doxygen
-  - gettext
-  - gifsicle
-  - git
-  - go
-  - gpg
-  - hub
-  - httpie
-  - iperf
-  - libevent
-  - sqlite
-  - mcrypt
-  - nmap
-  - node
-  - nvm
-  - php
-  - ssh-copy-id
-  - cowsay
-  - readline
-  - openssl
-  - pv
-  - wget
 
 My [dotfiles](https://github.com/devunderslash/dotfiles) are also installed into the current user's home directory, including the `.osx` dotfile for configuring many aspects of macOS for better performance and ease of use. You can disable dotfiles management by setting `configure_dotfiles: no` in your configuration.
 

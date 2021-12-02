@@ -26,7 +26,7 @@
       tags: ['dock']
     - role: gantsign.visual-studio-code
       users:
-        - username: '{{ user }}'
+        - username: admin
           visual_studio_code_extensions:
             - eamodio.gitlens # Supercharge Git 
             - akamud.vscode-theme-onedark # Theme

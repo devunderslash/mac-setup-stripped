@@ -26,7 +26,7 @@
       tags: ['dock']
     - role: gantsign.visual-studio-code
       users:
-        - username: '{{ user }}'
+        - username: admin
           visual_studio_code_extensions:
             - eamodio.gitlens # Supercharge Git 
             - akamud.vscode-theme-onedark # Theme
@@ -50,16 +50,12 @@
       when: configure_sudoers
       tags: ['sudoers']
 
-    - import_tasks: tasks/terminal.yml
-      when: configure_terminal
-      tags: ['terminal']
-
     - import_tasks: tasks/iterm2.yml
       when: configure_iterm
       tags: ['iterm']
 
-#    - import_tasks: tasks/extra-packages.yml
-#      tags: ['extra-packages']
+    - import_tasks: tasks/extra-packages.yml
+      tags: ['extra-packages']
 
     - name: Run configured post-provision ansible task files.
       include_tasks: "{{ outer_item }}"

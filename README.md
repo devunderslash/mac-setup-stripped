@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/geerlingguy/mac-dev-playbook/master/files/Mac-Dev-Playbook-Logo.png" width="250" height="156" alt="Mac Dev Playbook Logo" />
 
-# Mac Development Ansible Playbook
+# Mac Development Ansible Playbook for Frontend Developers
 
 This playbook installs and configures most of the software used on Mac for software development. Some things in macOS are slightly difficult to automate, so there are still a few manual steps, but much less than if you were to install all the software yourself. Please review the main files in this repository and change them approiately to your needs:
   - main.yml - This is the main playbook file.
@@ -72,19 +72,22 @@ Any variable can be overridden in `config.yml`; see the supporting roles' docume
 Applications (installed with Homebrew Cask):
 
   - [ChromeDriver](https://sites.google.com/chromium.org/driver/)
+  - [Datagrip](https://www.jetbrains.com/datagrip/)
   - [Docker](https://www.docker.com/)
   - [Google Chrome](https://www.google.com/chrome/)
+  - [Gradle](https://www.gradle.org/)
   - [Homebrew](http://brew.sh/)
+  - [IntelliJ IDEA](https://www.jetbrains.com/idea/)
   - [iTerm2](https://www.iterm2.com/)
   - [MySql](https://www.mysql.com/)
+  - [OpenJDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
   - [Postgresql](https://www.postgresql.org/)
   - [Postman](https://www.getpostman.com/)
+  - [AWS Session Manager](https://aws.amazon.com/session-manager/)
   - [Slack](https://slack.com/)
   - [Sourcetree](https://www.sourcetreeapp.com/)
-  - [Vagrant](https://www.vagrantup.com/)
-  - [VirtualBox](https://www.virtualbox.org/)
   - [Visual Studio Code](https://code.visualstudio.com/)
-  - [OpenJDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
+  - [Webstorm](https://www.jetbrains.com/webstorm/)
 
 Packages (installed with Homebrew):
 ## *** Common Dev Tools ***
@@ -92,29 +95,26 @@ Packages (installed with Homebrew):
   - git
   - github/gh/gh
   - hub
-  - go
-  - gpg
   - mysql
-  - sqlite
   - nmap
   - node
   - nvm
-  - ssh-copy-id
-  - readline
   - openssl
-  - wget
-  - zsh-history-substring-search
-  - tmux
+  - readline
   - romkatv/powerlevel10k/powerlevel10k
-
+  - ruby
+  - sqlite
+  - ssh-copy-id
+  - tmux
+  - wget
+  - yarn
+  - zsh-history-substring-search
   ## *** DevOps ***
   - awscli
   - jq
   - tree
-  - warrensbox/tap/tfswitch
-  - packer
-
   ## *** Java ***
+  - gradle@6 # Build tool.
   - jenv # Manage your Java environment
   - jmeter # Load testing and performance measurement application
   - maven # Java-based project management

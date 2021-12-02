@@ -147,25 +147,5 @@ pip_packages: []
 #   state: present # present/absent/latest, default: present
 #   version: "0.16.3" # default: N/A
 
-vscode_extensions:
-  # - vscoss.vscode-ansible # Ansible 
-  # - eamodio.gitlens # Supercharge Git 
-  # - akamud.vscode-theme-onedark # Theme
-  # - file-icons.file-icons #Icons
-  # - DotJoshJohnson.xml # ML formatting
-  # - formulahendry.code-runner # Run code from vscode
-  # - mauve.terraform # Terraform
-  # - ms-azuretools.vscode-docker # Linting for Dockerfile and docker-compose files
-  # - ms-python.python # Python
-  # - ms-vsliveshare.vsliveshare # Real-time collaborative development
-  # - msjsdiag.debugger-for-chrome # Debugger for Chrome
-  # - nhoizey.gremlins # Reveals some characters that can be harmful because they are invisible or looking like legitimate ones
-  # - quicktype.quicktype # Copy JSON, paste as Go, TypeScript, C#, C++ and more
-  # - redhat.vscode-yaml # Yaml language support
-  # - samuelcolvin.jinjahtml # Syntax highlighting for jinja
-  # - tht13.python # Python language
-  # - VisualStudioExptTeam.vscodeintellicode # AI-assisted development
-  # - gitHub.copilot the # AI assisted Development
-
 # Glob pattern to ansible task files to run after all other tasks are finished.
 post_provision_tasks: []

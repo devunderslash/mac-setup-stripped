@@ -28,8 +28,6 @@
       users:
         - username: '{{ user }}'
           visual_studio_code_extensions:
-          # with_items:
-          #   - '{{ vscode_extensions }}'
             - eamodio.gitlens # Supercharge Git 
             - akamud.vscode-theme-onedark # Theme
             - file-icons.file-icons #Icons
@@ -56,8 +54,8 @@
       when: configure_iterm
       tags: ['iterm']
 
-#    - import_tasks: tasks/extra-packages.yml
-#      tags: ['extra-packages']
+    - import_tasks: tasks/extra-packages.yml
+      tags: ['extra-packages']
 
     - name: Run configured post-provision ansible task files.
       include_tasks: "{{ outer_item }}"

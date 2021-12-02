@@ -8,6 +8,7 @@ This playbook installs and configures most of the software used on Mac for softw
   - main.yml - This is the main playbook file.
   - default.config.yml - Contains all software and VS Code extensions
   - dotfiles - You should review the repo that this links to as the dotfiles used may not be to your liking.
+  - VS Code extensions - You should review that the VSCode extensions in main.yml are what you would want
 
 ## Installation
 
@@ -27,7 +28,7 @@ You can filter which part of the provisioning process to run by specifying a set
 
 Not everyone's development environment and preferred software configuration is the same.
 
-You can override any of the defaults configured in `default.config.yml` by creating a `config.yml` file and setting the overrides in that file. For example, you can customize the installed packages and apps with something like:
+You can override any of the defaults configured in `default.config.yml` (by updating the file) by creating a `config.yml` file and setting the overrides in that file. For example, you can customize the installed packages and apps with something like:
 
 ```yaml
 homebrew_installed_packages:
@@ -88,7 +89,7 @@ Applications (installed with Homebrew Cask):
   - [OpenJDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
 Packages (installed with Homebrew):
-# *** Common Dev Tools ***
+## *** Common Dev Tools ***
   - bash-completion
   - git
   - github/gh/gh
@@ -108,14 +109,14 @@ Packages (installed with Homebrew):
   - tmux
   - romkatv/powerlevel10k/powerlevel10k
 
-  # *** DevOps ***
+  ## *** DevOps ***
   - awscli
   - jq
   - tree
   - warrensbox/tap/tfswitch
   - packer
 
-  # *** Java ***
+  ## *** Java ***
   - jenv # Manage your Java environment
   - jmeter # Load testing and performance measurement application
   - maven # Java-based project management
@@ -156,6 +157,7 @@ It's my hope that I can get the rest of these things wrapped up into Ansible pla
   2. Visual Studio Code may also need a font update via preferences:
     - Preferences > Editor > Font Size:  `"terminal.integrated.lineHeight": 1.3`
     - Preferences > Editor > Font Family: `"terminal.integrated.fontFamily": "MesloLGS NF"`
+  3. For iTerm2, you may need to install a font via running `p10k configure` and then restart iTerm2.
 
 ## Testing the Playbook
 

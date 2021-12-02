@@ -2,8 +2,6 @@
 
 # Mac Development Ansible Playbook
 
-[![CI][badge-gh-actions]][link-gh-actions]
-
 This playbook installs and configures most of the software used on Mac for software development. Some things in macOS are slightly difficult to automate, so there are still a few manual steps, but much less than if you were to install all the software yourself. Please review the main files in this repository and change them approiately to your needs:
   - main.yml - This is the main playbook file.
   - default.config.yml - Contains all software and VS Code extensions

@@ -87,7 +87,7 @@ Applications (installed with Homebrew Cask):
   - [OpenJDK](https://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
 Packages (installed with Homebrew):
-## *** Common Dev Tools ***
+## Common Dev Tools
   - bash-completion
   - git
   - github/gh/gh
@@ -107,14 +107,14 @@ Packages (installed with Homebrew):
   - tmux
   - romkatv/powerlevel10k/powerlevel10k
 
-  ## *** DevOps ***
+  ## DevOps
   - awscli
   - jq
   - tree
   - warrensbox/tap/tfswitch
   - packer
 
-  ## *** Java ***
+  ## Java
   - jenv # Manage your Java environment
   - jmeter # Load testing and performance measurement application
   - maven # Java-based project management
@@ -134,9 +134,9 @@ It's my hope that I can get the rest of these things wrapped up into Ansible pla
 
 ## Testing the Playbook
 
-This has been tested via Vagrant and VirtualBox using macOS Big Sur. Check the following repo with how to do this: #TODO
+This has been tested via Vagrant and VirtualBox using macOS Big Sur. Check the following repo with how to do this: https://github.com/devunderslash/Vagrant-Macos-BigSur
 
-Use this repo to build a [Mac OS X VirtualBox VM](https://github.com/geerlingguy/mac-osx-virtualbox-vm), on which you can continually run and re-run this playbook to test changes and make sure things work correctly.
+Or use this repo to build a [Mac OS X VirtualBox VM](https://github.com/geerlingguy/mac-osx-virtualbox-vm), on which you can continually run and re-run this playbook to test changes and make sure things work correctly.
 
 ## Ansible for DevOps
 

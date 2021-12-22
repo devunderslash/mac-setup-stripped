@@ -92,6 +92,8 @@ homebrew_installed_packages:
   - packer
   - tree
   - warrensbox/tap/tfswitch
+  - anchore/grype
+  - anchore/syft
 
   # *** Java ***
   - jenv # Manage your Java environment

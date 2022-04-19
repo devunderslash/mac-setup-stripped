@@ -146,3 +146,14 @@ Check out [Ansible for DevOps](https://www.ansiblefordevops.com/), which teaches
 
 This project was created by [Jeff Geerling](https://www.jeffgeerling.com/) (originally inspired by [MWGriffin/ansible-playbooks](https://github.com/MWGriffin/ansible-playbooks)) and butchered by [Paul Devlin](https://github.com/devunderslash)
 
+## Resources Used
+These resources were used as the basis for the approach outlined above:
+
+Install Python the right way - https://opensource.com/article/19/5/python-3-default-mac
+The original mac-devops-setup - https://github.com/geerlingguy/mac-dev-playbook
+Powerlevel10k - https://github.com/romkatv/powerlevel10k
+Geerlingguy dotfiles - https://github.com/geerlingguy/dotfiles
+Devunderslash dotfiles - https://github.com/devunderslash/dotfiles
+Playbook with VSCode - https://github.com/DemisR/mac-devops-setup
+Step by step ansible resource - http://www.talkingquickly.co.uk/2021/01/macos-setup-with-ansible/
+Pyenv - https://github.com/pyenv/pyenv

@@ -2,48 +2,12 @@
 downloads: ~/.ansible-downloads/
 
 configure_dotfiles: true
-# configure_osx: true
+
 configure_iterm: true
 # Change default shell to zsh
 default_shell_zsh: yes
 # Install oh my zsh
 install_oh_my_zsh: yes
-
-# Set to 'true' to configure the Dock via dockutil.
-configure_dock: true
-dockitems_remove:
-  - Launchpad
-  - TV
-  - Podcasts
-  - 'App Store'
-  - Keynote
-  - Numbers
-  - Pages
-  - News
-  - Music
-  - Contacts
-  - FaceTime
-  - Photos
-  - Messages
-  - Safari
-  - Maps
-
-dockitems_persist: []
-#  - name: "VSCode"
-#    path: "/Applications/Visual Studio Code.app"
-#    pos: 5
-#  - name: "Teams"
-#    path: "/Applications/Microsoft Teams.app"
-#    pos: 1
-#  - name: "Chrome"
-#    path: "/Applications/Google Chrome.app"
-#    pos: 3
-#  - name: "Sourcetree"
-#    path: "/Applications/Sourcetree.app"
-#    pos: 4
-#  - name: "iTerm"
-#    path: "/Applications/iTerm.app"
-#    pos: 2
 
 configure_sudoers: false
 sudoers_custom_config: ''
@@ -54,35 +18,31 @@ sudoers_custom_config: ''
 
 dotfiles_repo: https://github.com/devunderslash/dotfiles.git
 dotfiles_repo_accept_hostkey: true
-dotfiles_repo_version: main
+dotfiles_repo_version: updated
 dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
 dotfiles_files:
   - .zshrc
   - .gitignore
   - .inputrc
   - .p10k.zsh
-  - .vimrc
 
 homebrew_installed_packages:
   # *** Common Dev Tools ***
   # - ansible # Installed via Pip.
   - bash-completion
   - git
-  - github/gh/gh
+  - gh
   - go
-  - gpg
-  - hub
   - mysql
   - nmap
   - node
-  - nvm
   - openssl
-  - readline
   - romkatv/powerlevel10k/powerlevel10k
   - ruby
   - sqlite
   - ssh-copy-id
   - tmux
+  - chezmoi
   - wget
   - zsh-history-substring-search
 
@@ -90,35 +50,31 @@ homebrew_installed_packages:
   - awscli
   - jq
   - packer
-  - tree
   - warrensbox/tap/tfswitch
-  - anchore/grype
-  - anchore/syft
+  - grype
+  - syft
 
   # *** Java ***
   - jenv # Manage your Java environment
-  - jmeter # Load testing and performance measurement application
   - maven # Java-based project management
 
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
   - adoptopenjdk/openjdk
+  - anchore/grype
+  - anchore/syft
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - chromedriver
-  - docker
 #  - google-chrome - preinstalled
   - mysqlworkbench
   - pgadmin4
-  - slack
   - vagrant
   - virtualbox
   - virtualbox-extension-pack
-  - iterm2
   - postman
-  - sourcetree
   - adoptopenjdk8 #Java JDK
   - adoptopenjdk11 #Java JDK
 

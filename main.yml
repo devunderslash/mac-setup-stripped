@@ -21,29 +21,26 @@
     - role: geerlingguy.mac.mas
       when: mas_installed_apps or mas_installed_app_ids
       tags: ['mas']
-    - role: geerlingguy.mac.dock
-      when: configure_dock
-      tags: ['dock']
-    - role: gantsign.visual-studio-code
-      users:
-        - username: admin
-          visual_studio_code_extensions:
-            - eamodio.gitlens # Supercharge Git 
-            - akamud.vscode-theme-onedark # Theme
-            - file-icons.file-icons #Icons
-            - DotJoshJohnson.xml # ML formatting
-            - formulahendry.code-runner # Run code from vscode
-            - 4ops.terraform # Terraform
-            - ms-azuretools.vscode-docker # Linting for Dockerfile and docker-compose files
-            - ms-python.python # Python
-            - ms-vsliveshare.vsliveshare # Real-time collaborative development
-            - nhoizey.gremlins # Reveals some characters that can be harmful because they are invisible or looking like legitimate ones
-            - quicktype.quicktype # Copy JSON, paste as Go, TypeScript, C#, C++ and more
-            - redhat.vscode-yaml # Yaml language support
-            - samuelcolvin.jinjahtml # Syntax highlighting for jinja
-            - tht13.python # Python language
-            - VisualStudioExptTeam.vscodeintellicode # AI-assisted development
-            - gitHub.copilot # AI assisted Development
+    # - role: gantsign.visual-studio-code
+    #   users:
+    #     - username: admin
+    #       visual_studio_code_extensions:
+    #         - eamodio.gitlens # Supercharge Git 
+    #         - akamud.vscode-theme-onedark # Theme
+    #         - file-icons.file-icons #Icons
+    #         - DotJoshJohnson.xml # ML formatting
+    #         - formulahendry.code-runner # Run code from vscode
+    #         - 4ops.terraform # Terraform
+    #         - ms-azuretools.vscode-docker # Linting for Dockerfile and docker-compose files
+    #         - ms-python.python # Python
+    #         - ms-vsliveshare.vsliveshare # Real-time collaborative development
+    #         - nhoizey.gremlins # Reveals some characters that can be harmful because they are invisible or looking like legitimate ones
+    #         - quicktype.quicktype # Copy JSON, paste as Go, TypeScript, C#, C++ and more
+    #         - redhat.vscode-yaml # Yaml language support
+    #         - samuelcolvin.jinjahtml # Syntax highlighting for jinja
+    #         - tht13.python # Python language
+    #         - VisualStudioExptTeam.vscodeintellicode # AI-assisted development
+    #         - gitHub.copilot # AI assisted Development
 
   tasks:
     - import_tasks: tasks/sudoers.yml

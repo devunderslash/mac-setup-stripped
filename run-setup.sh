@@ -7,8 +7,8 @@ brew doctor
 # Install pyenv
 brew install pyenv
 
-# Install python 3.9.7
-pyenv install 3.9.7
+# Install python 3.10.4
+pyenv install 3.10.4
 
 echo 'export PATH="/usr/local/opt/python/libexec/bin:$PATH"' >> ~/.zshrc
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"

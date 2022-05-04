@@ -158,3 +158,6 @@ Devunderslash dotfiles - https://github.com/devunderslash/dotfiles
 Playbook with VSCode - https://github.com/DemisR/mac-devops-setup
 Step by step ansible resource - http://www.talkingquickly.co.uk/2021/01/macos-setup-with-ansible/
 Pyenv - https://github.com/pyenv/pyenv
+
+
+TODO - add themes for iterm into ansible script

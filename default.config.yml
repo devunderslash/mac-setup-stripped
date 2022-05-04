@@ -74,6 +74,7 @@ homebrew_cask_apps:
   - vagrant
   - virtualbox
   - virtualbox-extension-pack
+  - fly
   - postman
   - adoptopenjdk8 #Java JDK
   - adoptopenjdk11 #Java JDK

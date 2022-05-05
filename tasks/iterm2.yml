@@ -4,9 +4,7 @@
   homebrew_cask:
     name: "iterm2"
     state: present
-    install_options: "appdir={{ homebrew_cask_appdir }}"
-  register: result
-  ignore_errors: true
+    accept_external_apps: True
     
 - name: Get current Solarized package
   get_url: 

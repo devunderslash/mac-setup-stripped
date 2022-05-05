@@ -53,6 +53,7 @@ homebrew_installed_packages:
   - warrensbox/tap/tfswitch
   - grype
   - syft
+  - docker
 
   # *** Java ***
   - jenv # Manage your Java environment
@@ -66,11 +67,14 @@ homebrew_taps:
   - anchore/syft
 
 homebrew_cask_appdir: /Applications
+homebrew_cask_accept_external_apps: true
 homebrew_cask_apps:
+  - iterm2
   - chromedriver
 #  - google-chrome - preinstalled
   - mysqlworkbench
   - pgadmin4
+  - docker
   - vagrant
   - virtualbox
   - virtualbox-extension-pack

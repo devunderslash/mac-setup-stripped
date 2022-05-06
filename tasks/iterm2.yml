@@ -42,6 +42,22 @@
     type: string
     value: "{{ ansible_env.PWD }}/files/iTerm/files"
 
+- name: Copy iTerm settings file
+  copy:
+    src: "{{ ansible_env.PWD }}/files/iTerm/files/com.googlecode.iterm2.plist"
+    dest: "~/Library/Preferences/com.googlecode.iterm2.plist"
+    owner: $USER
+    mode: 0600
+    backup: yes
+
+- name: Copy iTerm profiles file
+  copy:
+    src: "{{ ansible_env.PWD }}/files/iTerm/files/windows.plist" 
+    dest: "~/Library/Saved\ Application\ State/com.googlecode.iterm2.savedState/windows.data"
+    owner: $USER
+    mode: 0600
+    backup: yes
+  
 - name: Installing zsh package
   homebrew:
     name: "{{ item }}"
